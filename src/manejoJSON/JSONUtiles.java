@@ -42,4 +42,16 @@ public class JSONUtiles {
         }
         return tokener;
     }
+
+    public static JSONObject leerObjeto(String archivo) {
+        try {
+            JSONTokener tokener = new JSONTokener(new FileReader(archivo));
+            return new JSONObject(tokener);
+        } catch (FileNotFoundException e) {
+            return new JSONObject(); // devuelve uno vacío si no existe
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new JSONObject();
+        }
+    }
 }

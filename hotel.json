@@ -1,12 +1,42 @@
 {
-    "habitaciones": [],
-    "reservas": [],
-    "personas": [{
-        "apellido": "Iriarte",
-        "documento": "40111333",
-        "id": "50",
-        "telefono": "2236997711",
-        "nombre": "Lucas",
-        "email": "lucas@gmail.com"
-    }]
+    "habitaciones": [
+        {
+            "estado": "Disponible",
+            "numero": 3,
+            "id": "99",
+            "tipoHabitacion": "Simple"
+        },
+        {
+            "estado": "Ocupada",
+            "numero": 4,
+            "id": "98",
+            "tipoHabitacion": "Doble"
+        }
+    ],
+    "reservas": [{
+        "estado": "Confirmada",
+        "fechaInicio": "2025-11-10",
+        "id": "5",
+        "personaId": "1",
+        "fechaFin": "2025-11-20",
+        "habitacionId": "3"
+    }],
+    "personas": [
+        {
+            "apellido": "Iriarte",
+            "documento": "44111000",
+            "id": "1",
+            "telefono": "2236947115",
+            "nombre": "Lucas",
+            "email": "ucas@gmail.com"
+        },
+        {
+            "apellido": "Zwiker",
+            "documento": "45222666",
+            "id": "2",
+            "telefono": "223999777",
+            "nombre": "Matias",
+            "email": "mati@gmail.com"
+        }
+    ]
 }
