@@ -7,7 +7,7 @@ import java.util.UUID;
 public class Usuario {
     private UUID id;
     private String username;
-    private String passwordHash; // en TP pueden usar plain o hash simple
+    private String passwordHash;
     private Rol rol;
     private boolean activo;
 

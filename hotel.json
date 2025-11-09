@@ -1,0 +1,12 @@
+{
+    "habitaciones": [],
+    "reservas": [],
+    "personas": [{
+        "apellido": "Iriarte",
+        "documento": "40111333",
+        "id": "50",
+        "telefono": "2236997711",
+        "nombre": "Lucas",
+        "email": "lucas@gmail.com"
+    }]
+}

@@ -3,10 +3,10 @@ package Clases;
 public abstract class Persona {
         private int id;
         private String nombre;
-            private String apellido;
-            private String email;
-            private int dni;
-            private String telefono;
+        private String apellido;
+        private String email;
+        private int dni;
+        private String telefono;
 
     public Persona() {
     }
