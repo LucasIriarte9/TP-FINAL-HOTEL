@@ -1,30 +1,38 @@
 package Clases;
 
 public class Cliente extends Persona{
-    private Habitacion habitacion;
+    private String nacionalidad;
+    private boolean esFrecuente;
 
-    public Cliente(Habitacion habitacion) {
-        this.habitacion = habitacion;
+    public Cliente(){
+        super();
     }
 
-    public Cliente(int id, String telefono, int dni, String email, String apellido, String nombre, Habitacion habitacion) {
-        super(id, telefono, dni, email, apellido, nombre);
-        this.habitacion = habitacion;
+    public Cliente(String telefono, int dni, String email, String apellido, String nombre, String nacionalidad, boolean esFrecuente) {
+        super(telefono, dni, email, apellido, nombre);
+        this.nacionalidad = nacionalidad;
+        this.esFrecuente = esFrecuente;
     }
 
-    public Cliente() {
+    // Getters y Setters (sin cambios)
+    public String getNacionalidad() {
+        return nacionalidad;
     }
 
-    public Habitacion getHabitacion() {
-        return habitacion;
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
     }
 
-    public void setHabitacion(Habitacion habitacion) {
-        this.habitacion = habitacion;
+    public boolean isEsFrecuente() {
+        return esFrecuente;
+    }
+
+    public void setEsFrecuente(boolean esFrecuente) {
+        this.esFrecuente = esFrecuente;
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return super.toString() + ", Nacionalidad: " + (nacionalidad != null ? nacionalidad : "N/A");
     }
 }

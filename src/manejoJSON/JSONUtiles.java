@@ -1,8 +1,6 @@
 package manejoJSON;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.*;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,5 +39,25 @@ public class JSONUtiles {
             e.printStackTrace();
         }
         return tokener;
+    }
+
+    /**
+     * Lee un archivo JSON que contiene un objeto y lo devuelve como un JSONObject.
+     * retorna Un JSONObject con el contenido, o uno vacío si el archivo no existe o falla la lectura.
+     */
+    public static JSONObject leerObjeto(String archivo) {
+        try{
+            String constent = new String(Files.readAllBytes(Paths.get(archivo)));
+            if(constent.isEmpty()){
+                return new JSONObject();
+            }
+            return new JSONObject(constent);
+        } catch (NullPointerException e) {
+            // El archivo no existe, es una situación normal la primera vez que se ejecuta.
+            return new JSONObject();
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
+            return new JSONObject(); // Devuelve vacío en caso de error.
+        }
     }
 }

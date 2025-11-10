@@ -1,12 +1,30 @@
 {
-    "habitaciones": [],
-    "reservas": [],
-    "personas": [{
-        "apellido": "Iriarte",
-        "documento": "40111333",
-        "id": "50",
-        "telefono": "2236997711",
-        "nombre": "Lucas",
-        "email": "lucas@gmail.com"
-    }]
+    "habitaciones": [{
+        "tipo": "Simple",
+        "numero": "20",
+        "reservasIds": ["fcc5fde6-95b2-4bbd-8810-cdf5b471265b"],
+        "id": "5da92695-363e-4aec-be57-983073c09c31",
+        "disponible": true
+    }],
+    "reservas": [{
+        "hasta": "2025-06-20",
+        "cancelada": false,
+        "desde": "2025-06-17",
+        "nombreReservante": "Pablo Fernandez",
+        "documento": "32970479",
+        "id": "fcc5fde6-95b2-4bbd-8810-cdf5b471265b",
+        "habitacionId": "5da92695-363e-4aec-be57-983073c09c31"
+    }],
+    "empleados": [],
+    "clientes": [{
+        "apellido": "Fernandez",
+        "id": "563fa251-ee84-48e5-b80f-3dae3c1d79d3",
+        "telefono": "2262569390",
+        "nombre": "Pablo",
+        "esFrecuente": false,
+        "email": "facu@mail.com",
+        "dni": 32970479,
+        "nacionalidad": "Argentina"
+    }],
+    "usuarios": []
 }

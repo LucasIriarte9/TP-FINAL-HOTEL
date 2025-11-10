@@ -1,18 +1,21 @@
 package Clases;
 
+import java.util.UUID;
+
 public abstract class Persona {
-        private int id;
-        private String nombre;
-        private String apellido;
-        private String email;
-        private int dni;
-        private String telefono;
+    private UUID id;
+    private String nombre;
+    private String apellido;
+    private String email;
+    private int dni;
+    private String telefono;
 
     public Persona() {
+        this.id = UUID.randomUUID();
     }
 
-    public Persona(int id, String telefono, int dni, String email, String apellido, String nombre) {
-        this.id = id;
+    public Persona(String telefono, int dni, String email, String apellido, String nombre) {
+        this.id = UUID.randomUUID();
         this.telefono = telefono;
         this.dni = dni;
         this.email = email;
@@ -20,10 +23,15 @@ public abstract class Persona {
         this.nombre = nombre;
     }
 
-/// CONSTRUCTORES
+    // --- GETTER Y SETTER  ---
+    public UUID getId() {
+        return id;
+    }
 
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
-    /// SET Y GET
     public String getNombre() {
         return nombre;
     }
@@ -48,12 +56,6 @@ public abstract class Persona {
     public void setDni(int dni) {
         this.dni = dni;
     }
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
     public String getTelefono() {
         return telefono;
     }
@@ -61,13 +63,10 @@ public abstract class Persona {
         this.telefono = telefono;
     }
 
-
-    ///  metodos
     public String getNombreCompleto() {
         return (nombre == null ? "" : nombre) + " " + (apellido == null ? "" : apellido);
     }
 
-    /// MOSTRAR
     @Override
     public String toString() {
         return "Persona{" +

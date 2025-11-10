@@ -16,13 +16,62 @@ public class Habitacion implements Reservable {
     private boolean disponible; // estado general (ej limpieza/reparacion)
     private List<Reserva> reservas = new ArrayList<>();
 
-    public Habitacion() { this.id = UUID.randomUUID(); this.disponible = true; }
+
+
+    public Habitacion() {
+        this.id = UUID.randomUUID();
+        this.disponible = true;
+    }
 
     public Habitacion(String numero, String tipo) {
         this();
         this.numero = numero;
         this.tipo = tipo;
     }
+
+
+
+    // getters/setters...
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
+    public void setReservas(List<Reserva> reservas) {
+        this.reservas = reservas;
+    }
+
+    public void agregarReserva(Reserva r) { reservas.add(r); }
+    public List<Reserva> getReservas() { return reservas; }
+
 
     @Override
     public boolean isDisponible(LocalDate desde, LocalDate hasta) {
@@ -32,12 +81,4 @@ public class Habitacion implements Reservable {
         }
         return true;
     }
-
-    public void agregarReserva(Reserva r) { reservas.add(r); }
-    public List<Reserva> getReservas() { return reservas; }
-
-    // getters/setters...
-    public String getNumero() { return numero; }
-    public String getTipo() { return tipo; }
-    public void setDisponible(boolean disponible) { this.disponible = disponible; }
 }

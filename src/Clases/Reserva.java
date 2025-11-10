@@ -30,8 +30,60 @@ public class Reserva {
     }
 
     // getters/setters...
-    public UUID getHabitacionId() { return habitacionId; }
-    public LocalDate getDesde() { return desde; }
-    public LocalDate getHasta() { return hasta; }
-    public void setCancelada(boolean cancelada) { this.cancelada = cancelada; }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getNombreReservante() {
+        return nombreReservante;
+    }
+
+    public void setNombreReservante(String nombreReservante) {
+        this.nombreReservante = nombreReservante;
+    }
+
+    public String getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(String documento) {
+        this.documento = documento;
+    }
+
+    public LocalDate getDesde() {
+        return desde;
+    }
+
+    public void setDesde(LocalDate desde) {
+        this.desde = desde;
+    }
+
+    public LocalDate getHasta() {
+        return hasta;
+    }
+
+    public void setHasta(LocalDate hasta) {
+        this.hasta = hasta;
+    }
+
+    public UUID getHabitacionId() {
+        return habitacionId;
+    }
+
+    public void setHabitacionId(UUID habitacionId) {
+        this.habitacionId = habitacionId;
+    }
+
+    public boolean isCancelada() {
+        return cancelada;
+    }
+
+    public void setCancelada(boolean cancelada) {
+        this.cancelada = cancelada;
+    }
 }
