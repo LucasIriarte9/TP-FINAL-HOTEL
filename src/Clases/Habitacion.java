@@ -11,7 +11,7 @@ import java.util.UUID;
 
 public class Habitacion implements Reservable {
     private UUID id;
-    private String numero;
+    private int numero;
     private String tipo; // sencillo, doble, suite, etc.
     private boolean disponible; // estado general (ej limpieza/reparacion)
     private List<Reserva> reservas = new ArrayList<>();
@@ -23,7 +23,7 @@ public class Habitacion implements Reservable {
         this.disponible = true;
     }
 
-    public Habitacion(String numero, String tipo) {
+    public Habitacion(int numero, String tipo) {
         this();
         this.numero = numero;
         this.tipo = tipo;
@@ -41,11 +41,11 @@ public class Habitacion implements Reservable {
         this.id = id;
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 

@@ -1,30 +1,56 @@
 {
     "habitaciones": [{
         "tipo": "Simple",
-        "numero": "20",
-        "reservasIds": ["fcc5fde6-95b2-4bbd-8810-cdf5b471265b"],
+        "numero": 20,
+        "reservasIds": [
+            "fcc5fde6-95b2-4bbd-8810-cdf5b471265b",
+            "1107c068-3d76-4deb-9e85-af63820aef5c"
+        ],
         "id": "5da92695-363e-4aec-be57-983073c09c31",
         "disponible": true
     }],
-    "reservas": [{
-        "hasta": "2025-06-20",
-        "cancelada": false,
-        "desde": "2025-06-17",
-        "nombreReservante": "Pablo Fernandez",
-        "documento": "32970479",
-        "id": "fcc5fde6-95b2-4bbd-8810-cdf5b471265b",
-        "habitacionId": "5da92695-363e-4aec-be57-983073c09c31"
-    }],
+    "reservas": [
+        {
+            "hasta": "2025-06-20",
+            "cancelada": false,
+            "desde": "2025-06-17",
+            "nombreReservante": "Pablo Fernandez",
+            "documento": "32970479",
+            "id": "fcc5fde6-95b2-4bbd-8810-cdf5b471265b",
+            "habitacionId": "5da92695-363e-4aec-be57-983073c09c31"
+        },
+        {
+            "hasta": "2025-04-08",
+            "cancelada": false,
+            "desde": "2025-06-07",
+            "nombreReservante": "MATIAS ZWICKER",
+            "documento": "45543410",
+            "id": "1107c068-3d76-4deb-9e85-af63820aef5c",
+            "habitacionId": "5da92695-363e-4aec-be57-983073c09c31"
+        }
+    ],
     "empleados": [],
-    "clientes": [{
-        "apellido": "Fernandez",
-        "id": "563fa251-ee84-48e5-b80f-3dae3c1d79d3",
-        "telefono": "2262569390",
-        "nombre": "Pablo",
-        "esFrecuente": false,
-        "email": "facu@mail.com",
-        "dni": 32970479,
-        "nacionalidad": "Argentina"
-    }],
+    "clientes": [
+        {
+            "apellido": "Fernandez",
+            "id": "563fa251-ee84-48e5-b80f-3dae3c1d79d3",
+            "telefono": "2262569390",
+            "nombre": "Pablo",
+            "esFrecuente": false,
+            "email": "facu@mail.com",
+            "dni": 32970479,
+            "nacionalidad": "Argentina"
+        },
+        {
+            "apellido": "ZWICKER",
+            "id": "90a4d552-68c8-4e26-843f-7043044b5af2",
+            "telefono": "2235655480",
+            "nombre": "MATIAS",
+            "esFrecuente": false,
+            "email": "MATIZWICKER@GMAIL.COM",
+            "dni": 45543410,
+            "nacionalidad": "ARGENTINA"
+        }
+    ],
     "usuarios": []
 }

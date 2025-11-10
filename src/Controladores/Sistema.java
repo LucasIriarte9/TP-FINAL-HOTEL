@@ -155,8 +155,21 @@ public class Sistema {
     }
     
 
-    //  busca por UUID
+    ///  busca por UUID
     public Optional<Cliente> buscarClientePorId(UUID id) {
         return this.clientes.stream().filter(c -> c.getId().equals(id)).findFirst();
+    }
+    ///  busca por DNI
+    public Optional<Cliente> buscarClientePorDni(int dni) {
+        return clientes.stream()
+                .filter(c -> c.getDni() == dni)
+                .findFirst();
+    }
+
+    ///  busca habitacion por numero
+    public Optional<Habitacion> buscarHabitacionPorNumero(int numero) {
+        return habitaciones.stream()
+                .filter(h -> h.getNumero() == numero)
+                .findFirst();
     }
 }

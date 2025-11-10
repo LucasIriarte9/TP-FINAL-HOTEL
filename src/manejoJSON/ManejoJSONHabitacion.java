@@ -27,7 +27,7 @@ public class ManejoJSONHabitacion {
 
     public static Habitacion fromJSON(JSONObject habitacionJson) throws JSONException {
         String idString = habitacionJson.getString("id");
-        String numero  = habitacionJson.getString("numero");
+        int numero  = habitacionJson.getInt("numero");
         String tipo = habitacionJson.getString("tipo");
         boolean disponible = habitacionJson.getBoolean("disponible");
 
